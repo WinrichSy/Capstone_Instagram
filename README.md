@@ -63,3 +63,4 @@ If these attributes were available:
 3. to_customer_time_date {time and date customers put to pick up or get delivered}: Show preffered time customers like their delivery  
 4. delivery_pick_up {string regarding customers' perferred method of getting grocery, pick up or delivered}: Show which method of getting grocery is more preferred.  
 5. order_price {total price of order in float type}: Show average amount customers pay for their grocery and how often it goes above the $35 limit for cheaper shipping.  
+6. user_start {date when user created an instacart account}: Can be used to determine the average amount of orders per week.  
