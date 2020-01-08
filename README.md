@@ -1,5 +1,13 @@
 Instacart 2017 Trend Analysis
 
+What is Instacart?
+Instacart is a same-day grocery delivery and pick-up service in the U.S. and Canada founded in 2012. Customers shop for groceries through their app and or website and have their groceries delivered or ready for pick-up at local groceries. They are partnered with major grocery chains such as Costco, ALDI, Sam's Club, Sprouts, and etc. Concurrently serve more than 20,000 different grocery stores across more than 5,500 cities in North America.
+
+Instacart's customers choose what groceries they want and add them into their digital cart online and or cell phone app. Instacart's personal shoppers pick, pack and deliver the order within the customer's designated time frame. For orders of $35 or more, the delivery fee is $3.99. With an Instacart Express membership for $9.99/month or an annual fee of $99, customers get unlimited, free delivery on orders over $35.
+
+Why Instacart?
+Instacart has been used to save customers trips to and from the groceries and time from searching for their products within the stores. With its growing popularity, its useful to understand what items are being bought and at what rate. That information can be used to help retainers to know what to stock up on. 
+
 Dataset can be downloaded at: https://www.instacart.com/datasets/grocery-shopping-2017  
 
 The csvs in dataset folder and their schema:  
@@ -44,11 +52,4 @@ NOTES:
 4. Product info doesn't include prices of the items
 5. Orders doesn't include total price paid
 
-Project History:  
-Jan 6, 2020 - Took the dataset from instacart's website for analysis. Decided on using Spark SQL for querying and filtering what content I need for visualization. Figuring out my pipeline process to avoid bottlenecks with some of the databases that hold 32 million rows. Had some trouble with SQL query and delve deeper into nested subqueries. Have 2 bar graphs up, but need to modify it to make them more presentable/readable.
 
-Todo: Update graphs to show different colors based on products' department and have a legend for them.
-
-Jan 7, 2020 -
-
-Todo: Group the lowest 10 departments and have it as its own section. Compare it to the other departments and all their items combined.
