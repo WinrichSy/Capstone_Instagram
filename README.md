@@ -13,37 +13,37 @@ Dataset can be downloaded at: https://www.instacart.com/datasets/grocery-shoppin
 The csvs in dataset folder and their schema:  
 aisles.csv rows:  134  
 root  
- |-- aisle_id: integer (nullable = true)  
- |-- aisle: string (nullable = true)  
+ |-- aisle_id: integer (nullable = true) aisle identifier  
+ |-- aisle: string (nullable = true) the name of the aisle  
 
 departments.csv rows:  21  
 root  
- |-- department_id: integer (nullable = true)  
- |-- department: string (nullable = true)  
+ |-- department_id: integer (nullable = true) department identifier  
+ |-- department: string (nullable = true) the name of the department  
 
 order_products_prior.csv rows:  32434489  
 root  
- |-- order_id: integer (nullable = true)  
- |-- product_id: integer (nullable = true)  
- |-- add_to_cart_order: integer (nullable = true)  
- |-- reordered: integer (nullable = true)  
+ |-- order_id: integer (nullable = true) foreign key  
+ |-- product_id: integer (nullable = true) foreign key  
+ |-- add_to_cart_order: integer (nullable = true) order in which each product was added to cart  
+ |-- reordered: integer (nullable = true) 1 if product has been ordered by this user in the past, 0 otherwise  
 
 orders.csv rows:  3421083  
 root  
- |-- order_id: integer (nullable = true)  
- |-- user_id: integer (nullable = true)  
- |-- eval_set: string (nullable = true)  
- |-- order_number: integer (nullable = true)  
- |-- order_dow: integer (nullable = true)  
- |-- order_hour_of_day: integer (nullable = true)  
- |-- days_since_prior_order: double (nullable = true)  
+ |-- order_id: integer (nullable = true) order identifier  
+ |-- user_id: integer (nullable = true) customer identifier  
+ |-- eval_set: string (nullable = true) which evaluation set this order belongs in  
+ |-- order_number: integer (nullable = true) the order sequence number for this user (1=first, n=nth)  
+ |-- order_dow: integer (nullable = true) the day of the week the order was placed on  
+ |-- order_hour_of_day: integer (nullable = true) the hour of the day the order was placed on  
+ |-- days_since_prior_order: double (nullable = true) days since the last order, capped at 30  
 
 products.csv rows:  49688  
 root  
- |-- product_id: integer (nullable = true)  
- |-- product_name: string (nullable = true)  
- |-- aisle_id: string (nullable = true)  
- |-- department_id: string (nullable = true)  
+ |-- product_id: integer (nullable = true) product identifier  
+ |-- product_name: string (nullable = true) name of the product  
+ |-- aisle_id: string (nullable = true) foreign key  
+ |-- department_id: string (nullable = true) foreign key  
 
 NOTES:
 1. order_products_train.csv is not used. It contains generated information from Instacart used for testing purposes only. Does not represent actual information obtained from orders.
