@@ -8,17 +8,12 @@ A deep dive into the Paris AirBnb dataset to get a better understanding on succe
 [2. Data Source](#DataSource)<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2a. About The Data](#data)<br>
 [3. Exploratory Data Analysis](#EDA)<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3a. Most Ordered Items in 2017](#3a)<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3b. Available Products Per Department](#3b)<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3c. Total Number of Orders Based on Department](#3c)<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3d. Percentage of Orders by Department](#3d)<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3e. Organic vs Non Organic Products](#3e)<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3f. Orders Made by Instacart Users During 2017](#3f)<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3h. Top 12 Products Added First Into Carts](#3h)<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3i. Number of Items Bought per Order](#3i)<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3j. Number of Orders Placed During Time of Day](#3j)<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3k. Orders Placed During Day of Week](#3k)<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3l. Number of Orders During Time of Day](#3l)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3a. Orders Made by Instacart Users During 2017](#3a)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3b. Users Ordering Stats](#3b)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3c. Timeframe of Orders](#3c)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3d. Most Ordered Items in 2017](#3d)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3e. Products Based on Departments](#3e)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3f. Number of Organic vs Non Organic Products](#3f)<br>
 [4. P-Test Hypothesis](#Hypothesis)<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[4a. P-Testing](#4a)<br>
 [5. Conclusions](#Conclusions)<br>
@@ -58,7 +53,7 @@ Attributes:
  |-- reordered: integer (nullable = true) 1 if product has been ordered by this user in the past, 0 otherwise  
 
 orders.csv rows:  3421083  
-root  
+Attributes:  
  |-- order_id: integer (nullable = true) order identifier  
  |-- user_id: integer (nullable = true) customer identifier  
  |-- eval_set: string (nullable = true) which evaluation set this order belongs in  
@@ -68,7 +63,7 @@ root
  |-- days_since_prior_order: double (nullable = true) days since the last order, capped at 30  
 
 products.csv rows:  49688  
-root  
+Attributes:  
  |-- product_id: integer (nullable = true) product identifier  
  |-- product_name: string (nullable = true) name of the product  
  |-- aisle_id: string (nullable = true) foreign key  
@@ -76,25 +71,38 @@ root
  
 ---
 ## <a id="EDA">Exploratory Data Analysis</a>
-### <a id="3a">3a. Most Ordered Items in 2017</a>
+### <a id="3a">3a. Orders Made by Instacart Users During 2017</a>
 
+<p align="center"><img src="AirBnb Capstone Graphs/5. Hist - Hosts vs Superhosts.png"></p>
+
+### <a id="3b">3b. Users Ordering Stats</a>
+
+<p align="center"><img src="Graphs/12. Orders Made by Instacart Users During 2017.png"></p>
+<p align="center"><img src="Graphs/13. Number of Items Bought per Order.png"></p>
+
+### <a id="3c">3c. Timeframe of Orders</a>
+
+<p align="center"><img src="Graphs/14. Number of Orders During Time of Day.png"></p>
+<p align="center"><img src="Graphs/15. Orders Placed During Day of Week.png"></p>
+<p align="center"><img src="Graphs/16. Number of Orders During Time of Day.png"></p>
+<p align="center"><img src="Graphs/17. Number of Orders During Time of Day.png"></p>
+
+
+### <a id="3d">3d. Most Ordered Items in 2017</a>
+Out of all the items ordered through Instacart in 2017, Bananas are the most prevalent item ordered.
 <p align="center"><img src="Graphs/1. 12 Most Ordered Items in 2017.png"></p>
 
-### <a id="3b">3b. Available Products Per Department</a>
-
+### <a id="3e">3e. Products Based on Departments</a>
+Although produces are ordered the most, there are four times more personal care products available for ordering. 
 <p align="center"><img src="Graphs/2.Available products per dept.png"></p>
 
-### <a id="3c">3c. Total Number of Orders Based on Department</a>
-
+The number of items ordered based on department are not linear with the amount of products the department have available. Althought there are 6562 unique personal care products, those items were ordered 447123 times. Whereas produces were ordred 9,479,291 times with only 1684 unique produces are available.
 <p align="center"><img src="Graphs/3. Total Numbers of Orders based on Dept.png"></p>
 
-### <a id="3d">3d. Percentage of Orders by Department</a>
-
 <p align="center"><img src="Graphs/4. Percentage of orders by dept.png"></p>
-
 <p align="center"><img src="Graphs/5. Most Popular Item Per Department.png"></p>
 
-### <a id="3e">3e. Organic vs Non Organic Products</a>
+### <a id="3f">3f. Organic vs Non Organic Products</a>
 
 <p align="center"><img src="Graphs/9. Number of Organic vs Non Organic.png"></p>
 <p align="center"><img src="Graphs/11. Percentages of Organic vs Non Organic.png"></p>
@@ -102,25 +110,7 @@ root
 <p align="center"><img src="Graphs/7. 12 Most Popular Non Organic Products.png"></p>
 <p align="center"><img src="Graphs/10. Amount of Unpopular Organic vs Non Organic Products.png"></p>
 
-### <a id="3f">3f. Orders Made by Instacart Users During 2017</a>
 
-<p align="center"><img src="AirBnb Capstone Graphs/5. Hist - Hosts vs Superhosts.png"></p>
-
-
-### <a id="3h">3h. Top 12 Products Added First Into Carts</a>
-
-<p align="center"><img src="Graphs/12. Orders Made by Instacart Users During 2017.png"></p>
-
-### <a id="3i">3i. Number of Items Bought per Order</a>
-
-<p align="center"><img src="Graphs/13. Number of Items Bought per Order.png"></p>
-
-### <a id="3j">3j. Timeframe of Orders</a>
-
-<p align="center"><img src="Graphs/14. Number of Orders During Time of Day.png"></p>
-<p align="center"><img src="Graphs/15. Orders Placed During Day of Week.png"></p>
-<p align="center"><img src="Graphs/16. Number of Orders During Time of Day.png"></p>
-<p align="center"><img src="Graphs/17. Number of Orders During Time of Day.png"></p>
 ---
 ## <a id="Hypothesis">P-Test</a>
 ### <a id="4a">4a. Models WITH Verification Dummies</a>
