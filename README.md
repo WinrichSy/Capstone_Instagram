@@ -1,4 +1,5 @@
 <p align="center"><img src="Pictures/instacart-vector-logo.png"></p>
+
 # **Instacart 2017 Trend Analysis**  
 
 ## Description  
