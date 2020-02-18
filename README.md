@@ -1,5 +1,6 @@
-# **Instacart 2017 Trend Analysis**  
 <p align="center"><img src="Pictures/instacart-vector-logo.png"></p>
+# **Instacart 2017 Trend Analysis**  
+
 ## Description  
 A deep dive into the Paris AirBnb dataset to get a better understanding on successful hosts on AirBnb. What is needed to gain Superhost status based on various attributes and predict if hosts are on their way to gain that status. 
 
