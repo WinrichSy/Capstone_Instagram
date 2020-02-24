@@ -1,9 +1,8 @@
 <p align="center"><img src="Pictures/instacart-vector-logo.png"></p>
 
 # **Instacart 2017 Trend Analysis**  
-
 ## Description  
-A deep dive into the Paris AirBnb dataset to get a better understanding on successful hosts on AirBnb. What is needed to gain Superhost status based on various attributes and predict if hosts are on their way to gain that status. 
+Analyize Instacart users' purchasing pattern and trends to get a better insight on the type of products that are purchased more often. Understanding what type of items available and are normally purchase can decrease inventory size and focus more important products, decreasing upkeep cost for low demanded items. 
 
 ## Table of Contents
 [1. Background & Motivation](#Background&Motivation)<br>
