@@ -10,14 +10,14 @@ Analyize Instacart users' purchasing pattern and trends to get a better insight 
 [3. Data Source](#DataSource)<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[3a. About The Data](#data)<br>
 [4. Exploratory Data Analysis](#EDA)<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[4a. Orders Made by Instacart Users During 2017](#3a)<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[4b. Users Ordering Stats](#3b)<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[4c. Timeframe of Orders](#3c)<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[4d. Most Ordered Items in 2017](#3d)<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[4e. Products Based on Departments](#3e)<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[4f. Number of Organic vs Non Organic Products](#3f)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[4a. Orders Made by Instacart Users During 2017](#4a)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[4b. Users Ordering Stats](#4b)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[4c. Timeframe of Orders](#4c)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[4d. Most Ordered Items in 2017](#4d)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[4e. Products Based on Departments](#4e)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[4f. Number of Organic vs Non Organic Products](#4f)<br>
 [5. P-Test Hypothesis](#Hypothesis)<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[5a. P-Testing](#4a)<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[5a. P-Testing](#5a)<br>
 [6. Conclusions](#Conclusions)<br>
 [7. Future Plans](#FuturePlans)<br>
 [8. Dependencies](#Dependencies)<br>
@@ -81,14 +81,14 @@ Attributes:
 # <a id="EDA">Exploratory Data Analysis</a>
 ## <a id="4a">4a. Orders Made by Instacart Users During 2017</a>
 95481 Instacart users placed at most 10 orders within 2017. There is also 1990 users that have placed orders at least 90 times throught the year. 
-<p align="center"><img src="Orders Made by Instacart Users During 2017.png"></p>
+<p align="center"><img src="Graphs/12. Orders Made by Instacart Users During 2017.png"></p>
 
 ## <a id="4b">4b. Users Ordering Stats</a>
 1,836,581 Instacart orders had at most 10 items placed. Whereas 36 orders had at least 90 products.
 <p align="center"><img src="Graphs/13. Number of Items Bought per Order.png"></p>
 
 When it comes to users adding products into their cart, bananas have the highest priority. Other itmes added into a cart first is primarily food. 
-<p align="center"><img src="Graphs/12. Graphs/8. Top 12 Products Added First in Carts.png"></p>
+<p align="center"><img src="Graphs/8. Top 12 Products Added First in Carts.png"></p>
 
 ## <a id="4c">4c. Timeframe of Orders</a>
 Most Instacart users do their shopping on the weekend. There is a 25% increase in ordering activity during Saturday and Sunday compared to the other days of the week. 
@@ -122,10 +122,10 @@ Bananas are the most popular item within the produce department. Organic Whole M
 
 ## <a id="4f">4f. Organic vs Non Organic Products</a>
 Number of non-organic products is remarkably higher than organic products available. There are only 5035 organic products compared to the 44653 non-organic products available.
-<p align="center"><img src="Graphs/9. Number of Organic vs Non Organic.png"></p>
+<p align="center"><img src="Graphs/9. Number of Organic vs Non Organic Products.png"></p>
 
 Looking solely at milk/eggs and produce department, the total number of organic products available make up 31.60% of all produces available. 
-<p align="center"><img src="Graphs/11. Percentages of Organic vs Non Organic.png"></p>
+<p align="center"><img src="Graphs/11. Percentages of Organic vs Non Organic Products Ordered.png"></p>
 
 The top 12 most popular organic items include bag of organic bananas and organic strawberries.
 <p align="center"><img src="Graphs/6. 12 Most Popular Organic Products.png"></p>
