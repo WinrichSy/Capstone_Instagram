@@ -2,7 +2,7 @@
 
 # **Instacart 2017 Trend Analysis**  
 ## Description  
-Analyize Instacart users' purchasing pattern and trends to get a better insight on the type of products that are purchased more often. Understanding what type of items available and are normally purchase can decrease inventory size and focus more important products, decreasing upkeep cost for low demanded items. 
+An analyisis into Instacart's users' purchase pattern and trends for better insight on favorable products. Understanding what type of items available and are normally purchase can decrease inventory size and focus more important products, decreasing upkeep cost for low demanded items. 
 
 ## Table of Contents
 [1. Background & Motivation](#Background&Motivation)<br>
